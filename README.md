@@ -29,6 +29,10 @@ dotnet build
 - Report generation uses a single pass over the sorted data to minimize additional memory consumption
 - A simple console progress bar provides real-time feedback during dataset generation and parsing
 
+## Requirements
+
+- .NET 10 SDK
+
 ## Usage
 
 ### 1. Write the dataset to the directory
