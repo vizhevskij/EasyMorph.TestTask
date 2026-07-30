@@ -1,0 +1,60 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net10.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <IsPackable>false</IsPackable>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Remove="TotalAmount\First\01_in.xml" />
+    <None Remove="TotalAmount\InvalidPeriods\01_in.xml" />
+    <None Remove="TotalAmount\InvalidTotalAmounts\01_in.xml" />
+    <None Remove="TotalAmount\SeveralFiles\01_in.xml" />
+    <None Remove="TotalAmount\SeveralFiles\02_in.xml" />
+    <None Remove="TotalAmount\UnclosedTag\01_in.xml" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Content Include="TotalAmount\First\01_in.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="TotalAmount\InvalidPeriods\01_in.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="TotalAmount\SeveralFiles\01_in.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="TotalAmount\SeveralFiles\02_in.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="coverlet.collector" Version="6.0.4" />
+    <PackageReference Include="Microsoft.NET.Test.Sdk" Version="17.14.1" />
+    <PackageReference Include="xunit" Version="2.9.3" />
+    <PackageReference Include="xunit.runner.visualstudio" Version="3.1.4" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\EasyMorph.TestTask\EasyMorph.TestTask.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Content Include="TotalAmount\UnclosedTag\01_in.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+  </ItemGroup>
+
+  <ItemGroup>
+    <Content Include="TotalAmount\InvalidTotalAmounts\01_in.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+  </ItemGroup>
+
+  <ItemGroup>
+    <Using Include="Xunit" />
+  </ItemGroup>
+
+</Project>

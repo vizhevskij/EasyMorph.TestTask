@@ -1,0 +1,8 @@
+{
+  "profiles": {
+    "EasyMorph.TestTask": {
+      "commandName": "Project",
+      "commandLineArgs": "generate"
+    }
+  }
+}

@@ -1,0 +1,13 @@
+﻿<?xml version="1.0"?>
+<Store Name='ABC'>
+	<Period Date='2026-07-26'>
+		<Product>
+			<ProductName>Banana</ProductName>
+			<TotalAmount>123.45</TotalAmount>
+		</Product>
+		<Product>
+			<ProductName>Orange</ProductName>
+			<TotalAmount>543.21</TotalAmount>
+		</Product>
+	</Period>
+</Store>

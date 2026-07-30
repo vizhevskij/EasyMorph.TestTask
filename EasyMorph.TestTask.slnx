@@ -1,0 +1,4 @@
+<Solution>
+  <Project Path="EasyMorph.TestTask/EasyMorph.TestTask.csproj" />
+  <Project Path="EasyMorph.UnitTests/EasyMorph.UnitTests.csproj" Id="abb47aed-8eec-4728-842e-fd9f1aabc374" />
+</Solution>
