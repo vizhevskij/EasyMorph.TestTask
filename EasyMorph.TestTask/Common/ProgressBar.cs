@@ -1,27 +1,27 @@
-﻿namespace EasyMorph.TestTask
+﻿namespace EasyMorph.TestTask.Common
 {
-    public sealed class ProgressBar
+    /// <summary>
+    /// Displays a simple console progress bar.
+    /// </summary>
+    public class ProgressBar: IDisposable
     {
-        private readonly int _total;
-        private readonly int _stars;
+        private const int Stars = 50;
+
+        private readonly int _total;        
 
         private int _current;
         private int _printed;
 
-        public ProgressBar(int total, int stars = 50)
+        public ProgressBar(int total, string prompt)
         {
             _total = total;
-            _stars = stars;
-
-            Console.Write('[');
+            Console.Write($"{prompt} [");
         }
 
         public void Increment()
         {
             _current++;
-
-            var shouldPrint = _current * _stars / _total;
-
+            var shouldPrint = _current * Stars / _total;
             while (_printed < shouldPrint)
             {
                 Console.Write('*');
@@ -29,14 +29,13 @@
             }
         }
 
-        public void Finish()
+        public void Dispose()
         {
-            while (_printed < _stars)
+            while (_printed < Stars)
             {
                 Console.Write('*');
                 _printed++;
             }
-
             Console.WriteLine("] Done");
         }
     }

@@ -1,4 +1,5 @@
 ﻿using EasyMorph.TestTask;
+using EasyMorph.TestTask.DataParser;
 using System.Xml;
 
 namespace EasyMorph.UnitTests
@@ -18,7 +19,7 @@ namespace EasyMorph.UnitTests
         public void CheckTotalAmount(string workDir, string resFile, string xPath, string expected, string expectedError = null)
         {
             var startDir = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, workDir);
-            var parser = new Parser(startDir);
+            var parser = new XmlParser(startDir);
             parser.Run();
             if (resFile != null && xPath != null && expected != null)
             {

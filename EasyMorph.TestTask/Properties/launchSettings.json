@@ -2,7 +2,7 @@
   "profiles": {
     "EasyMorph.TestTask": {
       "commandName": "Project",
-      "commandLineArgs": "generate"
+      "commandLineArgs": "parse --work-dir 2026_08_01__15_00"
     }
   }
 }

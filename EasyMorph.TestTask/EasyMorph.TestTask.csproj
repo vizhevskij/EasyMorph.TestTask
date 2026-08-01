@@ -7,12 +7,8 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <None Remove="US_Canada_1000_Products.xml.gz" />
-  </ItemGroup>
-
-  <ItemGroup>
-    <EmbeddedResource Include="US_Canada_1000_Products.xml.gz" />
-    <EmbeddedResource Include="US_Canada_100_Stores.xml.gz" />
+    <EmbeddedResource Include="TestDataGenerator\US_Canada_1000_Products.xml.gz" />
+    <EmbeddedResource Include="TestDataGenerator\US_Canada_100_Stores.xml.gz" />
   </ItemGroup>
 
 </Project>
