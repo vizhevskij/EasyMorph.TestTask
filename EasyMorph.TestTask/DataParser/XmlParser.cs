@@ -171,18 +171,20 @@ namespace EasyMorph.TestTask.DataParser
                 writer.WriteAttributeString("Date", date.ToString("yyyy-MM-dd"));
                 foreach (string name in storeNames)
                 {
+                    long totalAmount = 0;
                     if (index < lines.Count)
                     {
                         var line = lines[index];
                         if (line.Date == date && line.Store == name)
                         {
-                            writer.WriteStartElement("Store");
-                            writer.WriteAttributeString("Name", line.Store);
-                            writer.WriteElementString("TotalAmount", line.TotalAmount.ToMoneyString());
-                            writer.WriteEndElement();
+                            totalAmount = line.TotalAmount;
                             index++;
                         }
                     }
+                    writer.WriteStartElement("Store");
+                    writer.WriteAttributeString("Name", name);
+                    writer.WriteElementString("TotalAmount", totalAmount.ToMoneyString());
+                    writer.WriteEndElement();
                 }
                 writer.WriteEndElement();
                 writer.WriteEndDocument();
